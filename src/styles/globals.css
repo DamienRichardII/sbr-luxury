@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/cormorant-garamond/600.css";
+
+/* Design tokens centralisés */
+@theme {
+  --color-ink: #080808;
+  --color-white: #ffffff;
+  --color-cream: #f7f5f2;
+  --color-stone: #eae8e5;
+  --color-muted: #6b6b6b; /* #777 assombri légèrement pour le contraste AA sur blanc cassé */
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --radius-card: 0.875rem;
+  --shadow-soft: 0 6px 24px -10px rgb(0 0 0 / 0.18);
+  --container-page: 90rem;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+  h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: #fff; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .text-display { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem); line-height: 1.1; }
+  .text-title { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); line-height: 1.15; }
+}
