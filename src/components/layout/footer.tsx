@@ -34,7 +34,7 @@ export function Footer() {
   return (
     <footer className="border-t border-stone bg-cream">
       <div className="mx-auto grid max-w-[var(--container-page)] gap-x-8 gap-y-2 px-4 py-12 sm:px-6 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_1.5fr] lg:py-14">
-        <div className="mb-6 md:mb-0"><Link href="/" aria-label="SBR Luxury — accueil" className="block w-28 lg:w-32"><Logo sizes="128px" /></Link></div>
+        <div className="mb-6 md:mb-0"><Link href="/" aria-label="SBR Luxury — accueil" className="block w-24 lg:w-28"><Logo sizes="128px" /></Link></div>
         <Links title="Liens utiles" items={footerLinks.useful} />
         <Links title="Aide" items={footerLinks.help} />
         <div className="py-4 md:py-0">

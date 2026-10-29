@@ -12,8 +12,11 @@ export const siteConfig = {
   backendConnected: false,
   freeShippingLabel: "Livraison gratuite en France",
   contactEmail: "contact@sbrluxury.example", // À REMPLACER
-  /** Logo officiel : remplacer le fichier public/logos/sbr-luxury.svg (ou .png) */
-  logo: { src: "/logos/sbr-luxury.svg", width: 640, height: 360 },
+  /** Logo officiel : png transparent (header, footer) et version « carte » crème (hero) */
+  logo: {
+    src: "/logos/sbr-luxury.png", width: 1428, height: 1578,
+    plateSrc: "/logos/sbr-luxury-plate.png", plateWidth: 1392, plateHeight: 1542,
+  },
   /** Image de fond du hero (optionnelle) : déposer public/images/hero/hero.jpg */
   heroImage: "/images/hero/hero.jpg",
   editorialImage: "/images/editorial/banner.jpg",

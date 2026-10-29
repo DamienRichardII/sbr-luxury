@@ -45,9 +45,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="w-[min(72vw,26rem)] drop-shadow-[0_20px_50px_rgb(0_0_0/0.45)] sm:w-[min(52vw,34rem)] lg:w-[min(40vw,40rem)]"
+          className="drop-shadow-[0_20px_50px_rgb(0_0_0/0.45)]"
         >
-          <Logo priority sizes="(min-width:1024px) 40vw, 72vw" />
+          <Logo variant="plate" priority sizes="(min-width:1024px) 420px, 70vw" className="h-[min(clamp(15rem,46svh,27rem),86vw)] w-auto" />
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

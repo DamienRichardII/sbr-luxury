@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const org = { "@context": "https://schema.org", "@type": "Organization", name: siteConfig.name, url: siteConfig.url };
+  const org = { "@context": "https://schema.org", "@type": "Organization", name: siteConfig.name, url: siteConfig.url, logo: `${siteConfig.url}${siteConfig.logo.src}` };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />

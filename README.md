@@ -13,7 +13,7 @@ Déploiement Vercel : importer le dépôt, aucune variable obligatoire (voir `.e
 ## ⚠️ Assets à fournir (aucun n'était dans le dossier, hormis la maquette)
 | Fichier à déposer | Usage |
 |---|---|
-| `public/logos/sbr-luxury.svg` (ou .png, puis adapter `siteConfig.logo`) | **Logo officiel** — le fichier actuel est un PROVISOIRE typographique, à remplacer |
+| `public/logos/sbr-luxury.png` + `sbr-luxury-plate.png` | Logo officiel (intégré, extrait d'une image 464 px : idéalement le remplacer par l'export vectoriel d'origine, mêmes noms) |
 | `public/images/hero/hero.jpg` | Fond du hero (sacs, chaussures, accessoires ; tons noir/beige) |
 | `public/images/editorial/banner.jpg` | Bannière « Des pièces iconiques… » |
 | `public/images/categories/{sacs,chaussures,vetements,accessoires,best-sellers}.jpg` | Cartes catégories |
@@ -21,6 +21,9 @@ Déploiement Vercel : importer le dépôt, aucune variable obligatoire (voir `.e
 
 Tant qu'un fichier est absent, un visuel neutre de remplacement s'affiche (aucune image inventée).
 Utiliser uniquement des photos dont vous détenez les droits ; ne pas reprendre la maquette.
+
+## Logo & icônes
+Logo transparent (header/footer), version « carte » crème (hero), favicon, `icon.png`, `apple-icon.png`, `manifest.webmanifest`, images de partage 1200×630 (`src/app/opengraph-image.png`, `public/og/share.png`). Définir `NEXT_PUBLIC_SITE_URL` en production pour que les liens de partage soient absolus.
 
 ## Où modifier
 `src/data/site.ts` (paramètres, réseaux sociaux, logo) · `src/data/products.ts` (catalogue de **démonstration**) · `src/data/categories.ts` · `src/data/navigation.ts` · tokens couleurs/typos : `src/styles/globals.css`.
